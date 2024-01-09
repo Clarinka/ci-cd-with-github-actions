@@ -11,7 +11,7 @@ jobs:
 
     services:
       docker:
-        image: docker/compose:1.27.4
+        image: docker:dind
         options: --entrypoint "dockerd-entrypoint.sh"
         ports:
           - 2375:2375/tcp
