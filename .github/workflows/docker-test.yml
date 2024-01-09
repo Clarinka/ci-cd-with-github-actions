@@ -11,8 +11,10 @@ jobs:
 
     services:
       docker:
-        image: docker:20.10.8
+        image: docker/compose:1.27.4
         options: --entrypoint "dockerd-entrypoint.sh"
+        ports:
+          - 2375:2375/tcp
 
     steps:
     - name: Checkout repository
